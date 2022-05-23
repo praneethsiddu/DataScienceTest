@@ -16,3 +16,4 @@ pillow==8.0.1
 base58==2.0.1
 plotly==4.14.1
 openpyxl
+hydralit_components
