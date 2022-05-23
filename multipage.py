@@ -38,11 +38,32 @@ class MultiPage:
         st.sidebar.image("logo3.jpg")
         #st.sidebar.title("DataSight")
         #st.sidebar.caption("A DataScience HandBook")
-        page = st.sidebar.selectbox(
-            'App Navigation', 
-            self.pages, 
-            format_func=lambda page: page['title']
+       ### page = st.sidebar.selectbox(
+       #     'App Navigation', 
+         #   self.pages, 
+         #   format_func=lambda page: page['title']
+        )##
+        menu_data = [
+            {'icon': "far fa-copy", 'label':"Get Started"},
+            {'id':'Copy','icon':"🐙",'label':"Upload Data"},
+            {'icon': "fa-solid fa-radar",'label':"Data Stats"},
+            {'icon': "far fa-chart-bar", 'label':"Aggregation and flitering"},#no tooltip message
+            {'id':' Crazy return value 💀','icon': "💀", 'label':"Data Visualization"},
+            {'icon': "fas fa-tachometer-alt", 'label':"pandas profile report"}, #can add a tooltip message
+            {'icon': "far fa-copy", 'label':"AutoMl"},
+            {'icon': "fa-solid fa-radar",'label':"Custom Models"},
+         ]
+        over_theme = {'txc_inactive': '#FFFFFF'}
+        menu_id = hc.nav_bar(
+        menu_definition=menu_data,
+        override_theme=over_theme,
+        home_name='Home',
+        login_name='Logout',
+        hide_streamlit_markers=False, #will show the st hamburger as well as the navbar now!
+        sticky_nav=True, #at the top or not
+        sticky_mode='pinned', #jumpy or not-jumpy, but sticky or pinned
         )
         
+        
         # run the app function 
-        page['function']()
+        menu_id['function']()
