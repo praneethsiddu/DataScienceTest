@@ -6,6 +6,9 @@ Created on Sat Dec 18 16:03:17 2021
 """
 
 import streamlit as st
+import streamlit as st
+import hydralit_components as hc
+
 
 # Define the multipage class to manage the multiple apps in our program 
 class MultiPage: 
@@ -40,6 +43,6 @@ class MultiPage:
             self.pages, 
             format_func=lambda page: page['title']
         )
-
+        
         # run the app function 
         page['function']()
