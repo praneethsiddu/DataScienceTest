@@ -42,7 +42,7 @@ class MultiPage:
        #     'App Navigation', 
          #   self.pages, 
          #   format_func=lambda page: page['title']
-        )##
+        ##)
         menu_data = [
             {'icon': "far fa-copy", 'label':"Get Started"},
             {'id':'Copy','icon':"🐙",'label':"Upload Data"},
